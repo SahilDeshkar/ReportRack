@@ -1,0 +1,234 @@
+/* src/components/AISummaryModal.css */
+.ai-summary-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .ai-summary-content {
+    background-color: white;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    animation: modal-appear 0.3s ease;
+  }
+  
+  @keyframes modal-appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .ai-summary-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #0c2d1c, #1a5c38);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .ai-summary-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .close-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .ai-summary-tabs {
+    display: flex;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .tab {
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    color: #555;
+  }
+  
+  .tab.active {
+    color: #0c2d1c;
+  }
+  
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #0c2d1c, #1a5c38);
+    border-radius: 3px 3px 0 0;
+  }
+  
+  .tab:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  
+  .ai-summary-body {
+    padding: 0;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .tab-content {
+    padding: 1.5rem;
+  }
+  
+  .overview {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .metadata-section,
+  .insights-section,
+  .next-steps-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .metadata-section h3,
+  .insights-section h3,
+  .next-steps-section h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: #0c2d1c;
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 1rem;
+  }
+  
+  .metadata-section h3::before,
+  .insights-section h3::before,
+  .next-steps-section h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 1rem;
+    background: linear-gradient(135deg, #0c2d1c, #1a5c38);
+    border-radius: 2px;
+  }
+  
+  .metadata-list,
+  .insights-list,
+  .next-steps-list {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+  
+  .metadata-list li,
+  .insights-list li,
+  .next-steps-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  
+  .insights-list li {
+    padding-left: 0.5rem;
+  }
+  
+  .next-steps-list li {
+    padding-left: 0.25rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .ai-summary-footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .ai-summary-footer p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #777;
+    font-style: italic;
+  }
+  
+  .ai-summary-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(12, 45, 28, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #0c2d1c;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .ai-summary-error {
+    padding: 2rem;
+    text-align: center;
+    color: #dc3545;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .ai-summary-tabs {
+      flex-direction: column;
+    }
+    
+    .tab {
+      padding: 0.75rem;
+      text-align: center;
+    }
+    
+    .tab.active::after {
+      width: 30%;
+      left: 35%;
+    }
+  }
