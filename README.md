@@ -16,11 +16,11 @@ That’s where **ReportRack** comes in: an open platform that acts as your perso
 ## 🧠 Features
 
 - 🔐 **Authentication System** – Secure login & signup experience
-- 📊 **Dashboard Hosting** – Share your interactive Power BI dashboards in one place
-- 👍👎 **Like & Dislike Buttons** – Coming soon: get instant feedback on your work
-- 🌍 **Live Previews** – View dashboards directly from the dashboard list page
-- 🪄 **Student-First Design** – No enterprise hoops to jump through
-- 💜 **Purple-themed UI** – Sleek, simple, and stylish (just like you)
+- 📊 **Serverless & Scalable Architecture**-Uses Supabase for a fully serverless backend—leveraging PostgreSQL, storage, and JWT-based authentication—allowing rapid scaling without traditional DevOps overhead.
+- 🌍 **Secure and Compliant Dashboard Management** – Incorporates Supabase Row-Level Security and user-scoped file storage to ensure users can only access and modify their own content, adhering to best practices in cloud security.
+- 🪄 **Multi-Tier Dashboard Upload Pipeline** – Implements a transactional-like process for uploads, validating .pbix files and preview images, ensuring atomicity by rolling back on errors—mimicking robust enterprise-grade data pipelines.
+- **BI Portfolio-as-a-Service Platform Vision**- Positions itself as a GitHub-for-dashboards with support for discoverability, ownership, metadata, and user-focused design—making it a long-term scalable product for BI professionals globally.
+
 
 ---
 
