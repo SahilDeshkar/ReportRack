@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Power BI Showcase Web App
 
 ## Overview
@@ -56,3 +57,7 @@ Contributions are welcome! Please submit a pull request or open an issue for any
 
 ## License
 This project is licensed under the MIT License.
+=======
+# ReportRack
+A student-friendly platform to showcase and share Power BI dashboards without enterprise barriers.
+>>>>>>> 9f3205e9342bd4034a299c1353951f839ec973c2
