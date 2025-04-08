@@ -1,8 +1,40 @@
-<<<<<<< HEAD
-# Power BI Showcase Web App
+# 🚀 ReportRack – Power BI Portfolio Sharing Redefined
 
-## Overview
-The Power BI Showcase Web App is a React-based application designed to demonstrate Power BI capabilities. It provides a user-friendly interface for users to log in and access a dashboard displaying relevant data and information.
+**Your Power BI dashboards deserve the spotlight, not a corporate firewall.**  
+ReportRack is a React-based platform purpose-built for students, aspiring analysts, and data enthusiasts to **host and share Power BI dashboards**—without enterprise email, paid plans, or technical barriers.
+
+---
+
+## 🌟 Why ReportRack?
+
+Power BI’s embedding tools are powerful… but not student-friendly.  
+You either need a paid license or an enterprise email to embed dashboards—leaving students and independent creators stuck with screenshots or screen shares.  
+That’s where **ReportRack** comes in: an open platform that acts as your personal **Power BI portfolio**—live, accessible, and sharable.
+
+---
+
+## 🧠 Features
+
+- 🔐 **Authentication System** – Secure login & signup experience
+- 📊 **Dashboard Hosting** – Share your interactive Power BI dashboards in one place
+- 👍👎 **Like & Dislike Buttons** – Coming soon: get instant feedback on your work
+- 🌍 **Live Previews** – View dashboards directly from the dashboard list page
+- 🪄 **Student-First Design** – No enterprise hoops to jump through
+- 💜 **Purple-themed UI** – Sleek, simple, and stylish (just like you)
+
+---
+
+## 🧱 Tech Stack
+
+- **Frontend:** React.js, CSS
+- **Authentication:** Custom auth logic with local/session storage
+- **Deployment Ready:** Works great on Vercel, Netlify, GitHub Pages, etc.
+
+---
+
+## 📁 Project Structure
+
+
 
 ## Project Structure
 ```
@@ -60,4 +92,4 @@ This project is licensed under the MIT License.
 =======
 # ReportRack
 A student-friendly platform to showcase and share Power BI dashboards without enterprise barriers.
->>>>>>> 9f3205e9342bd4034a299c1353951f839ec973c2
+
